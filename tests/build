@@ -1,0 +1,3 @@
+#!/bin/rc
+8c acltest.c
+8l -o acltest acltest.8

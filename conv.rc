@@ -1,0 +1,8 @@
+#!/bin/rc
+
+for(i in `{ls *.c}){
+	echo 'converting '^$i^'...'
+	sed -e '1,5s/\<auth.h\>/\<authacl.h\>/g' $i > $i^'.tmp'
+	mv $i^'.tmp' $i
+}
+echo 'done.'
